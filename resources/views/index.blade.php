@@ -114,26 +114,25 @@
 						<div class="card border-secondary shadow">
 							<div class="card-body">
 								<div class="table-responsive">
-									<table class="table table-bordered w-100" id="dataTable">
+									<table id="dataTable" class="table table-striped table-bordered">
 										<thead>
 											<tr>
-												<th>No</th>
-												<th>Tahun</th>
-												<th>Skema Kompetensi</th>
-												<th>Kompeten</th>
-												<th>Belum Kompeten</th>
+												<th class="text-center">Tahun</th>
+												<th class="text-center">Skema Kompetensi</th>
+												<th class="text-center">Status Kompeten</th>
+												<th class="text-center">jumlah</th>
 											</tr>
 										</thead>
 										<tbody>
+											@foreach($laporan as $l)
 											<tr>
-												<td>1</td>
-												<td>2020</td>
-												<td>Web Designer</td>
-												<td>30 Orang</td>
-												<td>14 Orang</td>
+												<td class="text-center">{{ $l->tahun }}</td>
+												<td class="text-center">{{ $l->nama_kompetensi }}</td>
+												<td class="text-center">{{ $l->status_kompeten }}</td>
+												<td class="text-center">{{ $l->jumlah }}</td>
 											</tr>
+											@endforeach
 										</tbody>
-										
 									</table>
 								</div>
 							</div>
