@@ -50,9 +50,9 @@
 											<button type="submit" class="mt-2 btn btn-light w-100">Masuk</button>
 										</div>
 									</div>
-									<div class="col-md-4">
+									{{-- <div class="col-md-4">
 										<a href="#" class="teks-link">Lupa Password?</a>
-									</div>
+									</div> --}}
 									<div class="col-md-8">
 										<p>Belum punya Akun? <a href="/daftar" class="teks-link">Daftar Disini!</a></p>
 									</div>
