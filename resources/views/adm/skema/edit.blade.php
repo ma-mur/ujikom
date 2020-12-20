@@ -64,10 +64,10 @@
 								</div>
 								<div class="col-md-4 form-group">
 									<label for="masa_berlaku" class="teks">Masa Berlaku Sertifikat</label>
-									<input type="date" name="masa_berlaku" class="form-control @error('masa_berlaku') is-invalid @enderror" value="{{ $skema->masa_berlaku }}">
-									@error('masa_berlaku')
+									<input type="text" name="masa_berlaku" class="form-control{{--  @error('masa_berlaku') is-invalid @enderror --}}" value="{{ $skema->masa_berlaku }}" placeholder="3 Tahun">
+									{{-- @error('masa_berlaku')
 										<small class="teks-danger">{{ $message }}</small>
-									@enderror
+									@enderror --}}
 								</div>
 								<div class="col-md-12 form-group">
 									<div class="form-check">
