@@ -102,6 +102,9 @@
 										<label for="konfirmasi">Konfirmasi Password Baru</label>
 										<input id="konfirmasi" type="password" name="password_confirmation" class="form-control" required>
 									</div>
+									@if (session('invalid'))										
+										<p class="text-danger">{{ session('invalid') }}</p>
+									@endif
 									<div class="form-group">
 										<button type="submit" class="btn btn-primary w-100">Submit</button>
 									</div>
