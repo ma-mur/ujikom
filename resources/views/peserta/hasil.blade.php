@@ -41,8 +41,12 @@
 											</div>
 											<div class="col-md-4 mb-2">
 												<p class="teks-accordion"># Kompetensi</p>
-												<p class="teks-accordion">Jenis : {{ $k->jenis_kompetensi }}</p>
+												<p class="teks-accordion">
+													Jenis : {{ $k->jenis_kompetensi }} <br>
+													Masa Berlaku Sertifikat : {{ $k->masa_berlaku }}
+												</p>
 												<small class="d-block mt-1">Keterangan : {{ $k->deskripsi }}</small>
+
 											</div>
 											@if ($k->status_kompeten == 'Kompeten')
 												<div class="col-md-3 mb-2">
