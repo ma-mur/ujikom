@@ -32,25 +32,25 @@
 					<div class="col-md-3">
 						<h3 class="text-center">Quick Links</h3>
 						<ul style="list-style: none">
-							<li><a href="#" class="teks-link"><i class="fas fa-link"></i> STMIK Sumedang</a></li>
-							<li><a href="#" class="teks-link"><i class="fas fa-link"></i> Sistem Informasi</a></li>
-							<li><a href="#" class="teks-link"><i class="fas fa-link"></i> E-Journal</a></li>
-							<li><a href="#" class="teks-link"><i class="fas fa-link"></i> Perpustakaan</a></li>
-							<li><a href="#" class="teks-link"><i class="fas fa-link"></i> SPMI STMIK Sumedang</a></li>
-							<li><a href="#" class="teks-link"><i class="fas fa-link"></i> PMB STMIK Sumedang</a></li>
-							<li><a href="#" class="teks-link"><i class="fas fa-link"></i> Literasi Digital</a></li>
+							<li><a href="https://stmik-sumedang.ac.id/" target="_blank" class="teks-link"><i class="fas fa-link"></i> STMIK Sumedang</a></li>
+							<li><a href="http://siap.stmik-sumedang.ac.id/" target="_blank" class="teks-link"><i class="fas fa-link"></i> Sistem Informasi</a></li>
+							<li><a href="http://ejournal.stmik-sumedang.ac.id/" target="_blank" class="teks-link"><i class="fas fa-link"></i> E-Journal</a></li>
+							<li><a href="http://perpus.stmik-sumedang.ac.id/" target="_blank" class="teks-link"><i class="fas fa-link"></i> Perpustakaan</a></li>
+							<li><a href="http://bpm.stmik-sumedang.ac.id/" target="_blank" class="teks-link"><i class="fas fa-link"></i> SPMI STMIK Sumedang</a></li>
+							<li><a href="https://pmb.stmik-sumedang.ac.id/" target="_blank" class="teks-link"><i class="fas fa-link"></i> PMB STMIK Sumedang</a></li>
+							<li><a href="http://literasidigital.id/" target="_blank" class="teks-link"><i class="fas fa-link"></i> Literasi Digital</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 text-center mb-3">
 						<h3>Follow Us</h3>
-						<a href="#" class="teks-link mx-1"><i class="fab fa-facebook fa-2x"></i></a>
-						<a href="#" class="teks-link mx-1"><i class="fab fa-twitter fa-2x"></i></a>
+						<a href="https://www.facebook.com/stmiksmd/" target="_blank" class="teks-link mx-1"><i class="fab fa-facebook fa-2x"></i></a>
+						<a href="https://twitter.com/stmiksumedang" target="_blank" class="teks-link mx-1"><i class="fab fa-twitter fa-2x"></i></a>
 					</div>
 					<div class="col-md-3">
 						<h3 class=" text-center">Contact</h3>
 						<p><i class="fas fa-map"></i> Jl.Angkrek Situ No.19 Sumedang</p>
 						<p><i class="fas fa-phone"></i> Phone: (0261) 207395</p>
-						<a href="#" class="teks-link"><p><i class="fas fa-envelope"></i> E-mail: info@stmik-sumedang.ac.id</p></a>
+						E-mail:<a href="mailto:info@stmik-sumedang.ac.id" class="teks-link"><p><i class="fas fa-envelope"></i> info@stmik-sumedang.ac.id</p></a>
 					</div>
 				</div>
 			</div>
