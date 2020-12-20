@@ -59,7 +59,7 @@ class LaporanController extends Controller
 		];
 
 		$pdf = PDF::loadView('adm.laporan.pdf',$data);
-		return $pdf->stream('Laporan-'.date('dMY').'.pdf');
+		return $pdf->download('Laporan-'.date('dMY').'.pdf');
 		// return view('adm.laporan.pdf')->with($data);
 	}
 }
