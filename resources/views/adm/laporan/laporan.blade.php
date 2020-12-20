@@ -73,19 +73,19 @@
 											<table id="dataTable" class="table table-striped table-bordered">
 												<thead>
 													<tr>
-														<th class="tcenter">Tahun</th>
-														<th class="tcenter">Skema Kompetensi</th>
-														<th class="tcenter">Status Kompeten</th>
-														<th class="tcenter">jumlah</th>
+														<th class="text-center">Tahun</th>
+														<th class="text-center">Skema Kompetensi</th>
+														<th class="text-center">Status Kompeten</th>
+														<th class="text-center">jumlah</th>
 													</tr>	
 												</thead>
 												<tbody>
 													@foreach($laporan as $l)
 													<tr>
-														<td class="tcenter">{{ $l->tahun }}</td>
-														<td class="tcenter">{{ $l->nama_kompetensi }}</td>
-														<td class="tcenter">{{ $l->status_kompeten }}</td>
-														<td class="tright">{{ $l->jumlah }}</td>
+														<td class="text-center">{{ $l->tahun }}</td>
+														<td class="text-center">{{ $l->nama_kompetensi }}</td>
+														<td class="text-center">{{ $l->status_kompeten }}</td>
+														<td class="text-center">{{ $l->jumlah }}</td>
 													</tr>
 													@endforeach
 												</tbody>
