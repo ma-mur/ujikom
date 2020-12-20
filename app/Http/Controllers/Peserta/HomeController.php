@@ -98,7 +98,7 @@ class HomeController extends Controller
         $data = [
             'laporan'    => Laporan::where('nik', '=', $userNIK)
                                         ->join('kompetensis','laporans.id_kompetensi', '=', 'kompetensis.id')
-                                        ->select('laporans.*','kompetensis.nama_kompetensi','kompetensis.jenis_kompetensi','kompetensis.deskripsi')->get(),
+                                        ->select('laporans.*','kompetensis.nama_kompetensi','kompetensis.jenis_kompetensi','kompetensis.deskripsi','kompetensis.masa_berlaku')->get(),
         ];
 
         return view('peserta.hasil')->with($data);
@@ -120,21 +120,17 @@ class HomeController extends Controller
     }
 
     public function ubahPass(Request $request){
-        $userNIK = Auth::guard('peserta')->user()->nik;
-        $data = Peserta::where('nik','=',$userNIK)->get();
-        foreach ($data as $d) {
-            if ($d->password == Hash::make($request->input('pass-lama'))) {
-                if ($request->input('pass-baru') == $request->input('konfirmasi')) {
-                    $password = $request->input('pass-baru');
-                    $updt = DB::table('pesertas')->where('nik','=', $userNIK)->update(['password'=>$password]);
-                    if ($updt == true) {
-                        return redirect('/profile')->with('sukses','Password berhasil diubah');            
-                    }else{
-                        return redirect('/profile')->with('gagal','Password gagal diubah');
-                    }
-                }
-            }   
-        }        
+        $email = $request->input('email');
+        $pass = $request->input('password');
+        $pass_conf = $request->input('password_confirmation');
+        if ($pass == $pass_conf) {
+            Peserta::where('email', '=', $email)
+                ->update(['password' => Hash::make($pass)]);
+        }else{
+            return back()->with('invalid','Gagal!, Periksa kembali password yang anda masukkan');
+        }
+
+        return redirect('/logout');
     }
 
     // ============= Bukti =============
@@ -155,21 +151,21 @@ class HomeController extends Controller
         // return view('peserta.bukti');
     }
 
-    public function resetPassword(Request $request){
-        $status = Password::reset(
-            $request->only('email','password','password_conffirmation'),
-            function ($peserta,$password) use ($request){
-                $peserta->forceFill([
-                    'password' => Hash::make($password)
-                ])->save();
+    // public function resetPassword(Request $request){
+        // $status = Password::reset(
+        //     $request->only('email','password','password_confirmation'),
+        //     function ($peserta,$password) use ($request){
+        //         $peserta->forceFill([
+        //             'password' => Hash::make($password)
+        //         ])->save();
 
-                event(new PasswordReset($peserta));
-            }
-        );
+        //         event(new PasswordReset($peserta));
+        //     }
+        // );
 
-        return $status == Password::PASSWORD_RESET
-                    ? redirect()->route('login')->with('status', __($status))
-                    : back()->withErrors(['email' => __($status)]);
-    }
+        // return $status == Password::PASSWORD_RESET
+        //             ? redirect()->route('login')->with('status', __($status))
+        //             : back()->withErrors(['email' => __($status)]);       
+    // }
 
 }
