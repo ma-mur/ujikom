@@ -147,7 +147,7 @@ class HomeController extends Controller
             'jenis' => $jenis,
         ];
         $pdf = PDF::loadView('peserta.bukti',$data);
-        return $pdf->stream('bukti-'.$jenis.'-'.date('dMY').'.pdf');
+        return $pdf->download('bukti-'.$jenis.'-'.date('dMY').'.pdf');
         // return view('peserta.bukti');
     }
 
