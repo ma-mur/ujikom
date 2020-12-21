@@ -35,7 +35,7 @@ use App\Http\Controllers\LoginController;
 // ============= depan =============
 Route::get('/', [IndexController::class, 'index']);
 
-Route::get('/masuk', [LoginController::class, 'index'])->middleware('guest:peserta')->name('login');
+Route::get('/masuk', [LoginController::class, 'index'])->middleware('guest:peserta','guest:admin')->name('login');
 Route::post('/masuk', [LoginController::class, 'login']);
 Route::get('/logout', [LoginController::class, 'logout']);
 
