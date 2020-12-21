@@ -13,7 +13,7 @@ class Peserta extends Authenticatable
     use HasFactory,Notifiable;
 
     protected $table = 'pesertas';
-    protected $promaryKey = 'id';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
     	'email',
