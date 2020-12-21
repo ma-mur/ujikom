@@ -12,19 +12,16 @@
 					<div class="col-md-6">
 					<div class="card mb-2 bg-utama">
 						<div class="card-body h-100">
-							<!-- <div class="alert alert-danger" role="alert">
-								A simple danger alert—check it out!
-								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div> -->
 							<h3 class="judul-section-putih mb-4 text-left">Masuk ke akun Anda</h3>
 							<hr style="background-color: #fff">
 							@if (session('info'))
-										<div class="col-md-12" style="background-color: #dc3545">
-											<p class="text-center">{{ session('info') }}</p>
-										</div>															
-									@endif
+							<div class="alert alert-danger" role="alert">
+								{{ session('info') }}
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							@endif
 								<div class="row mb-3">
 									<div class="col-md-6">
 										<div class="form-group">
