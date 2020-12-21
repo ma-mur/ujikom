@@ -31,7 +31,7 @@ class LoginController extends Controller
     	}elseif(Auth::guard('admin')->attempt($data)){
             return redirect()->intended('/adm/peserta');
         }else{
-    		return redirect('/masuk')->with('info','Email atau Password Salah, mohon untuk diperiksa kembali');
+    		return redirect('/masuk')->with('info','Kesalahan saat login, silahkan ulang lagi');
     	}
     }
 
