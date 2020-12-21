@@ -205,7 +205,7 @@
 		<h3 style="margin-top: 50px;margin-bottom: 5px;text-align: center">Keterangan</h3>
 		<hr style="margin: 0 0 2px 0;padding: 0;border: 1.5px solid #000">
 	@if ($jenis == 'pendaftaran' )
-		<p>Lakukan Pembayaran dengan datang ke kampus STMIK Sumedang bagian BAAK, jika sudah unggahkan struk pembayaran untuk mengkonfirmasikan pembayaran.</p>
+		<p>Jika sudah melakukan pembayaran, unggahkan struk pembayaran untuk mengkonfirmasikan pembayaran.</p>
 	@else
 		<p>Untuk pelaksanaan Uji Kompetensi dilaksanakan sesuai dengan jadwal yang tertera.</p>
 	@endif
