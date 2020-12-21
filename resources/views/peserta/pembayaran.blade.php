@@ -124,7 +124,7 @@
 				var tampil = document.querySelector('.img-preview-struk');
 				var sampul = document.querySelector('.file-struk');
 				var id = $(this).data('id');
-				console.log(id)
+				// console.log(id)
 				$('#pembayaran').modal('show');
 				$('#idbayar').val(id);
 				$('#img-struk').val('');
