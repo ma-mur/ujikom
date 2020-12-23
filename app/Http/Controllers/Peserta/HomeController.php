@@ -29,17 +29,18 @@ class HomeController extends Controller
         $userNIK = Auth::guard('peserta')->user()->nik;
         if ($status == 'belum') {
             $kompetensi = Pengajuan::where('pengajuans.nik', '=', $userNIK)
-                                   ->join('kompetensis','pengajuans.id_kompetensi','=','kompetensis.id')
-                                   ->select('pengajuans.*','kompetensis.nama_kompetensi')
-                                   ->leftjoin('laporans', 'pengajuans.id', '=', 'laporans.id_pengajuan')
-                                   ->whereNull('laporans.id_pengajuan')
-                                   ->orderBy('pengajuans.id','desc')->get();
+                                ->join('kompetensis','pengajuans.id_kompetensi','=','kompetensis.id')
+                                ->select('pengajuans.*','kompetensis.nama_kompetensi','kompetensis.jenis_kompetensi','kompetensis.deskripsi')
+                                ->leftjoin('laporans', 'pengajuans.id', '=', 'laporans.id_pengajuan')
+                                ->whereNull('laporans.id_pengajuan')
+                                ->orderBy('pengajuans.id','desc')->get();
 
-        }else{
-            $kompetensi = Pengajuan::where('nik', '=', $userNIK)
-                                   ->join('kompetensis','pengajuans.id_kompetensi', '=', 'kompetensis.id')
-                                   ->select('Pengajuans.*','kompetensis.nama_kompetensi','kompetensis.jenis_kompetensi','kompetensis.deskripsi')
-                                   ->orderBy('id','desc')->get();
+        }elseif($status == 'sudah'){
+            $kompetensi = Laporan::where('Laporans.nik', '=', $userNIK)
+                                ->join('kompetensis','Laporans.id_kompetensi', '=', 'kompetensis.id')
+                                ->leftjoin('pengajuans', 'laporans.id_pengajuan', '=', 'pengajuans.id')
+                                ->select('Laporans.*','kompetensis.nama_kompetensi','kompetensis.jenis_kompetensi','kompetensis.deskripsi','pengajuans.tagihan')
+                                ->orderBy('id','desc')->get();
         }
 
     	$data = [
