@@ -111,6 +111,6 @@ class DaftarController extends Controller
 
         $pengajuan->save();
 
-        return redirect('/daftar')->with('sukses','Selamat Anda telah berhasil mendaftar');
+        return redirect('/sukses');
 	}
 }
