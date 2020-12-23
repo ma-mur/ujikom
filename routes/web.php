@@ -37,11 +37,15 @@ Route::get('/', [IndexController::class, 'index']);
 
 Route::get('/masuk', [LoginController::class, 'index'])->middleware('guest:peserta','guest:admin')->name('login');
 Route::post('/masuk', [LoginController::class, 'login']);
+
 Route::get('/logout', [LoginController::class, 'logout']);
 
 // Daftar
 Route::get('/daftar', [DaftarController::class,'index']);
 Route::post('/daftar/store', [DaftarController::class,'store']);
+Route::get('/sukses', function(){
+	return view('sukses');
+});
 
 
 
