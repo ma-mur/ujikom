@@ -40,6 +40,11 @@ html {
 	background-color: #3e65a0;
 }
 
+.bg-sukses{
+	background-color: #28a745 !important;
+	color: #fff !important;
+}
+
 .bg-kedua{
 	color: #3d3d3d;
 	background-color: #ffff00;
