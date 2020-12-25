@@ -17,7 +17,6 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="accordion" id="accordionExample">
-
 						@php
 							$no=1;
 						@endphp
@@ -75,7 +74,6 @@
 									</div>
 								</div>
 							</div>
-
 						@endforeach
 						@else
 
