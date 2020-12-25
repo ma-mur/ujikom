@@ -5,6 +5,9 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel='shortcut icon' type='image/x-icon' href='{{ asset('images/stmik-sumedang.png') }}' />
+		<meta name="keywords" content="Uji Kompetensi, STMIK Sumedang, ujikom, Teknik Informatika, Sistem Informasi, Manajemen Informatika">
+		<meta name="description" content="Daftarkan diri Anda segera untuk mengetahui apakah Anda telah kompeten atau belum kompeten pada suatu unit kompetensi tertentu.">
+
 		<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/datatables.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/all.css') }}">
