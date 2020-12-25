@@ -9,9 +9,6 @@
 					</div>
 					<div class="col-md-7 mb-3 order-md-1">
 						<h1 class="mb-3 text-left judul">Uji Kompetensi</h1>
-						{{-- {{ date('d m y H:i:s a') }} --}}
-						{{-- {{ time() }} --}}
-						{{-- {{ config('app.name') }} --}}
 						<p class="lead">Daftarkan diri Anda segera untuk mengetahui apakah Anda telah kompeten atau belum kompeten pada suatu unit kompetensi tertentu.</p>
 						<div class="row">
 							<div class="col-md-6 my-1">
@@ -75,7 +72,6 @@
 										@if ($s->status_promo == '1')
 											<div class="corner-ribbon">Promo!!</div>
 										@endif										
-
 										<h4 class="judul">{{ $s->nama_kompetensi }}</h4>
 									</div>
 									<div class="card-body text-center">
