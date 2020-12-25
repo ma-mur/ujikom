@@ -98,27 +98,7 @@
 	</style>	
 </head>
 <body>
-	{{-- <table border="0" class="header mt">
-		<tr>
-			<td class="bg-dark">
-				<h4>bukti pendaftaran</h4>
-			</td>
-		</tr>
-	</table> --}}
-	
 	<table style=" width: 100%;margin-top: 20px;margin-bottom: 20px" border="0">
-		{{-- <tr>
-			<td rowspan="4" align="center"><img src="{{ asset('images/stmik-sumedang.png') }}" alt="" style="width: 100px"></td>
-		</tr>
-		<tr>
-			<td>Uji Kompetensi STMIK Sumedang</td>
-		</tr>
-		<tr>
-			<td>Jl. Angkrek Situ No.19 Sumedang 45323 | Telp. (0261) 207 395</td>
-		</tr>
-		<tr>
-			<td>Website : https://ujikom.stmik-sumedang.ac.id | Email: info@stmik-sumedang.ac.id</td>
-		</tr> --}}
 		<tr>
 			<td width="100" align="center"><img src="{{ public_path('images/stmik-sumedang.png') }}" width="120" alt=""></td>
 			<td align="center">
