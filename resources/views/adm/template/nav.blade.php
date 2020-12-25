@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-ujikomp sticky-top shadow-sm">
+		<nav class="navbar navbar-expand-lg navbar-ujikomp sticky-top shadow-sm">
 			<div class="container-fluid">
 				<a href="/" class="navbar-brand">
 					<img src="{{ asset('images/logo.png')}}" class="d-inline" style="width: 200px" alt="logo">
