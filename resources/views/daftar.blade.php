@@ -71,9 +71,9 @@
 									<option selected disabled>-- Pilih --</option>
 									@foreach($skema as $s)
 									@if (old('skema_kompetensi') == $s->id)
-									<option value="{{ $s->id }}" selected>{{ $s->nama_kompetensi }}</option>
+										<option value="{{ $s->id }}" selected>{{ $s->nama_kompetensi }}</option>
 									@else
-									<option value="{{ $s->id }}">{{ $s->nama_kompetensi }}</option>
+										<option value="{{ $s->id }}">{{ $s->nama_kompetensi }}</option>
 									@endif
 									@endforeach
 								</select>
@@ -96,7 +96,7 @@
 							</div>
 							<div class="col-sm-5">
 								@error('ktp')
-								<small class="teks-danger">{{ $message }}</small>
+									<small class="teks-danger">{{ $message }}</small>
 								@enderror
 							</div>
 						</div>
