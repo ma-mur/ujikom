@@ -24,7 +24,10 @@ class LoginController extends Controller
             'password' => 'required',
         ]);
 
-    	$data = $request->only('email','password');
+    	$data = [
+            'email'     => strtolower($request->input('email')),
+            'password'  => $request->input('password'),
+        ];
 
     	if (Auth::guard('peserta')->attempt($data)) {
     		return redirect()->intended('/home/belum');
