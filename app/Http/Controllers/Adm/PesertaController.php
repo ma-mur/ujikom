@@ -88,7 +88,7 @@ class PesertaController extends Controller
         $peserta->id_kompetensi         = $request->input('skema_kompetensi');
         $peserta->ktp                   = $KtpStore;
         $peserta->foto                  = $FotoStore;
-        $peserta->email                 = $request->input('email');
+        $peserta->email                 = strtolower($request->input('email'));
         $peserta->password              = Hash::make($request->input('nik'));
         $peserta->no_telp               = $request->input('no_telp');
         $peserta->tanggal_lahir         = $request->input('tanggal_lahir');
@@ -257,8 +257,16 @@ class PesertaController extends Controller
             $peserta->foto              = $request->input('data_foto');
         }
         
-        $peserta->email                 = $request->input('email');
-        // $peserta->password              = md5($request->input('nik'));
+        $peserta->email                 = strtolower($request->input('email'));
+
+        if ($request->input('passwordnew') == '') {
+            $peserta->password              = $request->input('passwordold');
+        }else{
+            $peserta->password              = Hash::make($request->input('passwordnew'));
+        }
+        
+
+
         $peserta->no_telp               = $request->input('no_telp');
         $peserta->tanggal_lahir         = $request->input('tanggal_lahir');
         $peserta->alamat                = $request->input('alamat');
