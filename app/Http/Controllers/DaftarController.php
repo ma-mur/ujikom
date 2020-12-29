@@ -61,7 +61,7 @@ class DaftarController extends Controller
         $peserta->id_kompetensi         = $request->input('skema_kompetensi');
         $peserta->ktp                   = $KtpStore;
         $peserta->foto                  = $FotoStore;
-        $peserta->email                 = $request->input('email');
+        $peserta->email                 = strtolower($request->input('email'));
         $peserta->password              = Hash::make($request->input('nik'));
         $peserta->no_telp               = $request->input('no_telp');
         $peserta->tanggal_lahir         = $request->input('tanggal_lahir');
