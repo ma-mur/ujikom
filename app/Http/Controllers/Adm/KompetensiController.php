@@ -106,10 +106,10 @@ class KompetensiController extends Controller
             $skema->status_promo        = $request->input('status_promo');
             $skema->promo_stmik         = str_replace('.', '', $request->input('promo_stmik'));
             $skema->promo_umum          = str_replace('.', '', $request->input('promo_umum'));
-        }elseif ($request->input('status_promo') == '0') {
+        }elseif ($request->input('status_promo') == '') {
             $skema->status_promo        = '0';
-            $skema->promo_stmik         = '';
-            $skema->promo_umum          = '';
+            $skema->promo_stmik         = '0';
+            $skema->promo_umum          = '0';
         }
 
         $skema->jenis_kompetensi    = $request->input('jenis_kompetensi');
