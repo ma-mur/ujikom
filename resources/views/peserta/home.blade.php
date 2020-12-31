@@ -93,13 +93,15 @@
 													<button type='submit' class="my-1 btn btn-outline-info w-100">Bukti Pendaftaran</button>	
 												</form>
 												
-												<form action="/bukti" method="post">
-													@csrf
-													@method('get')
-													<input type="hidden" name="id" value="{{ $k->id }}">
-													<input type="hidden" name="jenis" value="pembayaran">
-													<button type='submit' class="my-1 btn btn-outline-info w-100">Bukti Pembayaran</button>	
-												</form>
+												@if ($k->konfirmasi_pembayaran == '1')
+													<form action="/bukti" method="post">
+														@csrf
+														@method('get')
+														<input type="hidden" name="id" value="{{ $k->id }}">
+														<input type="hidden" name="jenis" value="pembayaran">
+														<button type='submit' class="my-1 btn btn-outline-info w-100">Bukti Pembayaran</button>
+													</form>
+												@endif
 											</div>
 										</div>
 									</div>

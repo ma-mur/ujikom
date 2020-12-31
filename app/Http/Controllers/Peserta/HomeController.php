@@ -39,8 +39,8 @@ class HomeController extends Controller
             $kompetensi = Laporan::where('Laporans.nik', '=', $userNIK)
                                 ->join('kompetensis','Laporans.id_kompetensi', '=', 'kompetensis.id')
                                 ->leftjoin('pengajuans', 'laporans.id_pengajuan', '=', 'pengajuans.id')
-                                ->select('Laporans.*','kompetensis.nama_kompetensi','kompetensis.jenis_kompetensi','kompetensis.deskripsi','pengajuans.tagihan')
-                                ->orderBy('id','desc')->get();
+                                ->select('Laporans.*','kompetensis.nama_kompetensi','kompetensis.jenis_kompetensi','kompetensis.deskripsi','pengajuans.tagihan','pengajuans.*')
+                                ->orderBy('Laporans.id','desc')->get();
         }
 
     	$data = [

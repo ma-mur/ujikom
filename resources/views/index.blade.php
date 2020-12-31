@@ -27,22 +27,22 @@
 					<div class="col-md-3 my-5">
 						<i class="fas fa-sign-in-alt fa-3x"></i>
 						<h5 class="lead mb-3">MASUK/DAFTAR</h5>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum ad deleniti aperiam commodi exercitationem nam. Voluptatibus id illo, reprehenderit. Veritatis quia placeat labore, nulla fugit non repellendus facilis obcaecati quidem.</p>
+						<p>Daftarkan diri Anda untuk mengikuti pelaksanaan uji kompetensi.</p>
 					</div>
 					<div class="col-md-3 my-5">
 						<i class="fas fa-dollar-sign fa-3x"></i>
 						<h5 class="lead mb-3">PEMBAYARAN</h5>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum ad deleniti aperiam commodi exercitationem nam. Voluptatibus id illo, reprehenderit. Veritatis quia placeat labore, nulla fugit non repellendus facilis obcaecati quidem.</p>
+						<p>Lakukan pembayaran sesuai dengan skema kompetensi yang Anda daftarkan.</p>
 					</div>
 					<div class="col-md-3 my-5">
 						<i class="fas fa-tasks fa-3x"></i>
 						<h5 class="lead mb-3">PENGUJIAN</h5>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum ad deleniti aperiam commodi exercitationem nam. Voluptatibus id illo, reprehenderit. Veritatis quia placeat labore, nulla fugit non repellendus facilis obcaecati quidem.</p>
+						<p>Pelaksanaan uji kompetensi dilakukan secara online ataupun offline.</p>
 					</div>
 					<div class="col-md-3 my-5">
 						<i class="fas fa-file fa-3x"></i>
 						<h5 class="lead mb-3">SERTIFIKAT</h5>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum ad deleniti aperiam commodi exercitationem nam. Voluptatibus id illo, reprehenderit. Veritatis quia placeat labore, nulla fugit non repellendus facilis obcaecati quidem.</p>
+						<p>Sertifikat didapat ketika Anda dinyatakan KOMPETEN pada skema kompetensi yang Anda daftarkan.</p>
 					</div>
 				</div>
 			</div>
@@ -80,15 +80,22 @@
 										<h3 class="judul-section">
 											@if ($s->status_promo == '1')
 												Rp. {{ number_format($s->promo_stmik,'0',',','.') }}
+												<sup><del>
+												Rp. {{ number_format($s->harga_stmik,'0',',','.') }}
+												</del></sup>
 											@else
 												Rp. {{ number_format($s->harga_stmik,'0',',','.') }}
 											@endif
+
 										</h3>
 										<hr class="border-primary">
 										<p class="lead">Umum</p>
 										<h3 class="mb-5 judul-section">
 											@if ($s->status_promo == '1')
 												Rp. {{ number_format($s->promo_umum,'0',',','.') }}
+												<sup><del>
+												Rp. {{ number_format($s->harga_umum,'0',',','.') }}
+												</del></sup>
 											@else
 												Rp. {{ number_format($s->harga_umum,'0',',','.') }}
 											@endif

@@ -54,6 +54,7 @@
 												@endif
 												</td>
 												<td>
+												@if ($k->konfirmasi_pembayaran == '1')
 													<form action="/bukti" method="post">
 														@csrf
 														@method('get')
@@ -61,6 +62,7 @@
 														<input type="hidden" name="jenis" value="pembayaran">
 														<button type='submit' class="my-1 btn btn-outline-info w-100">Bukti Pembayaran</button>	
 													</form>
+												@endif
 												</td>
 											</tr>
 											@endforeach

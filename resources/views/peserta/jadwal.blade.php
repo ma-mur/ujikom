@@ -56,6 +56,9 @@
 											</div>
 										</div>
 									</div>
+								@else
+								<p class="text-muted mb-5 mt-5">Belum ada Jadwal</p>
+								<br><br><br>
 								@endif
 							@endforeach
 						@else

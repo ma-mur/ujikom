@@ -50,7 +50,8 @@
 						<h3 class=" text-center">Contact</h3>
 						<p><i class="fas fa-map"></i> Jl.Angkrek Situ No.19 Sumedang</p>
 						<p><i class="fas fa-phone"></i> Phone: (0261) 207395</p>
-						E-mail:<a href="mailto:info@stmik-sumedang.ac.id" class="teks-link"><p><i class="fas fa-envelope"></i> info@stmik-sumedang.ac.id</p></a>
+						<p><i class="fas fa-envelope"></i> E-mail : 
+							<a href="mailto:info@stmik-sumedang.ac.id" class="teks-link"> info@stmik-sumedang.ac.id</a></p>
 					</div>
 				</div>
 			</div>

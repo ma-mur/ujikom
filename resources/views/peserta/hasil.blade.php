@@ -76,7 +76,8 @@
 							</div>
 						@endforeach
 						@else
-
+							<p class="text-muted mb-5 mt-5">Belum ada Hasil</p>
+							<br><br><br>
 						@endif
 						</div>
 					</div>
