@@ -60,7 +60,7 @@
 											<select name="institusi" id="institusi" class="form-control @error('institusi') is-invalid @enderror" onchange="Institusi()">
 												<option selected disabled>-- Pilih --</option>
 												<option value="STMIK_Sumedang">STMIK Sumedang</option>
-												<option value="Umum">Umum</option>
+												<option value="umum">Umum</option>
 												<option value="lain">Lainnya</option>
 											</select>
 											<input type="text" id="lainnya" name="lainnya" class="form-control mt-2" placeholder="ketikkan disini.." value="{{ old('lainnya') }}" style="display: none">

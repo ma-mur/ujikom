@@ -52,8 +52,10 @@
 				<div class="row my-3">
 					<div class="col-md-12 my-1">
 						<div class="card shadow">
-							<div class="card-body">
-								{!! $info->informasi !!}
+							<div class="card-body py-5">
+								@if ($info != null)
+									{!! $info->informasi !!}
+								@endif
 							</div>
 						</div>
 					</div>
