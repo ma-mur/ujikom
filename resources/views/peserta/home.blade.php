@@ -7,11 +7,11 @@
 					<div class="col-md-6">
 						<h5 class="py-2 judul-section">Daftar Kompetensi Anda :</h5>		
 					</div>
-					<div class="col-md-6">
+					{{-- <div class="col-md-6">
 						<div class="text-right mt-2">
 							<a href="#" class="my-auto btn btn-primary"><i class="fas fa-question-circle"></i> Bantuan</a>
 						</div>
-					</div>
+					</div> --}}
 				</div>
 				<hr>
 				<div class="row">

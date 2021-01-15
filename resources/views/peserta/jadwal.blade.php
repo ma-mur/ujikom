@@ -7,11 +7,11 @@
 					<div class="col-md-6">
 						<h5 class="py-2 judul-section">Jadwal Ujian Kompetensi :</h5>
 					</div>
-					<div class="col-md-6">
+					{{-- <div class="col-md-6">
 						<div class="text-right mt-2">
 							<a href="#" class="my-auto btn btn-primary"><i class="fas fa-question-circle"></i> Bantuan</a>
 						</div>
-					</div>
+					</div> --}}
 				</div>
 				<hr>
 				<div class="row">
@@ -57,9 +57,22 @@
 										</div>
 									</div>
 								@else
-								<p class="text-muted mb-5 mt-5">Belum ada Jadwal</p>
+								<div class="card shadow border-primary">
+										<div class="card-header border-primary" id="heading{{ $j->id }}">
+											<h2 class="mb-0 ">
+											<button class="btn teks-accordion btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse{{ $j->id }}" aria-expanded="true" aria-controls="collapse{{ $j->id }}">
+											{{ $no++ }}. {{ $j->nama_kompetensi }}
+											</button>
+											</h2>
+										</div>
+										<div id="collapse{{ $j->id }}" class="collapse show" aria-labelledby="heading{{ $j->id }}" data-parent="#accordionExample">
+											<div class="card-body">
+												<p class="text-muted mb-5 mt-5">Belum ada Jadwal</p>
+											</div>
+										</div>
+									</div>
 								<br><br><br>
-								@endif
+								@endif	
 							@endforeach
 						@else
 							<p class="text-muted mb-5 mt-5">Tidak ada Skema Kompetensi yang terdaftar</p>

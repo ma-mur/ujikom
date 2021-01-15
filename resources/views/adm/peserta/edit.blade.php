@@ -36,7 +36,8 @@
 									<div class="form-group row">
 										<label for="password" class="col-sm-2 teks">password</label>
 										<div class="col-sm-5">
-											<input type="password" class="form-control " id="passwordnew" name="passwordnew" placeholder="kosongkan jika tidak diubah">
+											<input type="password" class="form-control " id="passwordnew" name="passwordnew">
+											<small class="form-text text-muted">Kosongkan jika tidak diubah</small>
 											
 											<input type="hidden" class="form-control @error('password') is-invalid @enderror" id="passwordold" name="passwordold" value="{{ $peserta->password }}">
 										</div>

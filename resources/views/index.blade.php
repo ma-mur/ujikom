@@ -81,10 +81,10 @@
 										<p class="lead">STMIK Sumedang</p>
 										<h3 class="judul-section">
 											@if ($s->status_promo == '1')
-												Rp. {{ number_format($s->promo_stmik,'0',',','.') }}
 												<sup><del>
 												Rp. {{ number_format($s->harga_stmik,'0',',','.') }}
 												</del></sup>
+												Rp. {{ number_format($s->promo_stmik,'0',',','.') }}
 											@else
 												Rp. {{ number_format($s->harga_stmik,'0',',','.') }}
 											@endif
@@ -94,10 +94,10 @@
 										<p class="lead">Umum</p>
 										<h3 class="mb-5 judul-section">
 											@if ($s->status_promo == '1')
-												Rp. {{ number_format($s->promo_umum,'0',',','.') }}
 												<sup><del>
 												Rp. {{ number_format($s->harga_umum,'0',',','.') }}
 												</del></sup>
+												Rp. {{ number_format($s->promo_umum,'0',',','.') }}
 											@else
 												Rp. {{ number_format($s->harga_umum,'0',',','.') }}
 											@endif

@@ -87,7 +87,8 @@ class HomeController extends Controller
                                     ->join('jadwals', 'pengajuans.id_kompetensi', '=', 'jadwals.id_kompetensi')
                                     ->select('pengajuans.id_kompetensi', 'pengajuans.id', 'pengajuans.konfirmasi_pembayaran', 'kompetensis.nama_kompetensi','jadwals.jam','jadwals.tanggal','jadwals.tempat','jadwals.deskripsi','jadwals.asesor')
                                     ->leftjoin('laporans', 'pengajuans.id', '=', 'laporans.id_pengajuan')
-                                   ->whereNull('laporans.id_pengajuan')->get(),
+                                   ->whereNull('laporans.id_pengajuan')
+                                   ->orderBy('pengajuans.id','desc')->get(),
         ];
 
         return view('peserta.jadwal')->with($data);
