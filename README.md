@@ -3,7 +3,7 @@
 <p align="center"><img src="public/images/index.png" width="50%"></p>
 
 <p><b>Aplikasi Pelaksanaan Uji Kompetensi</b> adalah Aplikasi berbasis web yang digunakan untuk mempermudah bagi orang-orang yang ingin melakukan
-ujian kompetensi</p>
+ujian kompetensi.</p>
     
 ## Kebutuhan
 
