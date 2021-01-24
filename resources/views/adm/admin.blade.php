@@ -34,15 +34,12 @@
 												<td>{{ $a->name }}</td>
 												<td>{{ $a->email }}</td>
 												<td>
-												@if ($a->id == '1')
-													<button class="btn btn-danger" disabled><i class="fas fa-trash"></i></button>
-												@else
-													<form action="/adm/admin/{{ $a->id }}" method="post">
-														@csrf
-														@method('DELETE')
-														<button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?')"><i class="fas fa-trash"></i></button>
-													</form>
-												@endif
+												
+												<form action="/adm/admin/{{ $a->id }}" method="post">
+													@csrf
+													@method('DELETE')
+													<button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?')"><i class="fas fa-trash"></i></button>
+												</form>
 												</td>
 											</tr>
 										@endforeach
