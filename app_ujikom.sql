@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Jan 2021 pada 07.19
+-- Waktu pembuatan: 24 Jan 2021 pada 11.14
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.4.10
 
@@ -35,14 +35,6 @@ CREATE TABLE `asesors` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data untuk tabel `asesors`
---
-
-INSERT INTO `asesors` (`id`, `nama_lengkap`, `institusi`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Ethan Hunt', 'IMF', 1, '2020-11-25 15:57:22', '2020-11-25 16:04:19'),
-(4, 'Nick Furry', 'Shield', 1, '2020-11-26 01:22:50', '2020-11-26 01:22:50');
 
 -- --------------------------------------------------------
 
@@ -97,15 +89,6 @@ CREATE TABLE `jadwals` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data untuk tabel `jadwals`
---
-
-INSERT INTO `jadwals` (`id`, `jam`, `tanggal`, `tempat`, `id_kompetensi`, `deskripsi`, `asesor`, `created_at`, `updated_at`) VALUES
-(1, '08.00', '2021-01-04', 'STMIK Sumedang', 1, 'Jangan Telat!!', 'Ethan Hunt', '2020-11-25 16:12:06', '2021-01-13 02:15:38'),
-(5, '09.00', '2021-01-05', 'STMIK Sumedang', 6, 'Pengujian dilaksanakan diruangan Lab 2', 'Nick Furry', '2021-01-13 05:45:22', '2021-01-13 05:45:22'),
-(6, '10.00', '2021-01-18', 'STMIK Sumedang', 3, 'Pengujian dilaksanakan diruangan lab komputer 1', 'Nick Furry', '2021-01-17 06:43:41', '2021-01-17 06:43:41');
 
 -- --------------------------------------------------------
 
@@ -187,7 +170,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (7, '2020_11_22_035611_create_laporans_table', 1),
 (8, '2020_11_22_035637_create_pengajuans_table', 1),
 (9, '2020_11_22_035701_create_pesertas_table', 1),
-(10, '2020_11_22_035722_create_asesors_table', 1);
+(10, '2020_11_22_035722_create_asesors_table', 1),
+(11, '2021_01_24_144846_add_kode_to_pengajuan', 2),
+(12, '2021_01_24_145103_add_kode_to_peserta', 2);
 
 -- --------------------------------------------------------
 
@@ -218,6 +203,7 @@ CREATE TABLE `pengajuans` (
   `bukti_pembayaran` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `waktu_pembayaran` datetime DEFAULT NULL,
   `konfirmasi_pembayaran` int(11) DEFAULT NULL,
+  `kode` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -242,6 +228,7 @@ CREATE TABLE `pesertas` (
   `tanggal_lahir` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `alamat` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `tanggal_pendaftaran` datetime NOT NULL,
+  `kode` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -350,7 +337,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `asesors`
 --
 ALTER TABLE `asesors`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `failed_jobs`
@@ -368,7 +355,7 @@ ALTER TABLE `informasis`
 -- AUTO_INCREMENT untuk tabel `jadwals`
 --
 ALTER TABLE `jadwals`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `kompetensis`
@@ -386,7 +373,7 @@ ALTER TABLE `laporans`
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `pengajuans`

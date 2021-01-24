@@ -24,8 +24,8 @@
 							</a>
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
 								<a class="dropdown-item {{ (Request::segment(2) == 'skema') ? 'aktif' : '' }}" href="/adm/skema">Skema</a>
-								<a class="dropdown-item {{ (Request::segment(2) == 'jadwal') ? 'aktif' : '' }}" href="/adm/jadwal">Jadwal</a>
 								<a class="dropdown-item {{ (Request::segment(2) == 'asesor') ? 'aktif' : '' }}" href="/adm/asesor">Asesor</a>
+								<a class="dropdown-item {{ (Request::segment(2) == 'jadwal') ? 'aktif' : '' }}" href="/adm/jadwal">Jadwal</a>
 							</div>
 						</li>
 						<li class="nav-item {{ (Request::segment(2) == 'informasi') ? 'active' : '' }}">
