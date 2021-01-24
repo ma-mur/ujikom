@@ -18,6 +18,10 @@ class CreateInformasisTable extends Migration
             $table->text('informasi')->nullable();
             $table->timestamps();
         });
+
+        DB::table('informasis')->insert(array(
+            'informasi' => 'Selamat Datang',
+        ));
     }
 
     /**

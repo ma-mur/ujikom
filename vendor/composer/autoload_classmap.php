@@ -18,6 +18,8 @@ return array(
     'App\\Http\\Controllers\\Adm\\PesertaController' => $baseDir . '/app/Http/Controllers/Adm/PesertaController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\DaftarController' => $baseDir . '/app/Http/Controllers/DaftarController.php',
+    'App\\Http\\Controllers\\IndexController' => $baseDir . '/app/Http/Controllers/IndexController.php',
+    'App\\Http\\Controllers\\LoginController' => $baseDir . '/app/Http/Controllers/LoginController.php',
     'App\\Http\\Controllers\\Peserta\\HomeController' => $baseDir . '/app/Http/Controllers/Peserta/HomeController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',

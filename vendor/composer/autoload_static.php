@@ -541,6 +541,8 @@ class ComposerStaticInit1b6c8605c08f6968f058f0d5365c7014
         'App\\Http\\Controllers\\Adm\\PesertaController' => __DIR__ . '/../..' . '/app/Http/Controllers/Adm/PesertaController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DaftarController' => __DIR__ . '/../..' . '/app/Http/Controllers/DaftarController.php',
+        'App\\Http\\Controllers\\IndexController' => __DIR__ . '/../..' . '/app/Http/Controllers/IndexController.php',
+        'App\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
         'App\\Http\\Controllers\\Peserta\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Peserta/HomeController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',

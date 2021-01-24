@@ -21,7 +21,9 @@ class PesertaController extends Controller
     public function index()
     {
         $data = [
-            'peserta'       => Peserta::orderBy('id','desc')->get(),
+            'peserta'  => Peserta::join('kompetensis','pesertas.id_kompetensi','=','kompetensis.id')
+                         ->select('pesertas.*','kompetensis.nama_kompetensi')
+                         ->orderBy('pesertas.id','desc')->get(),
         ];
         return view('adm.peserta.peserta')->with($data);
     }
@@ -60,6 +62,8 @@ class PesertaController extends Controller
             'alamat'             => 'required',
         ]);
 
+        $kode = date('dmyhis');
+
         // KTP
         $KtpWithExt     = $request->file('ktp')->getClientOriginalName();
         $ktp            = pathinfo($KtpWithExt, PATHINFO_FILENAME);
@@ -94,6 +98,7 @@ class PesertaController extends Controller
         $peserta->tanggal_lahir         = $request->input('tanggal_lahir');
         $peserta->alamat                = $request->input('alamat');
         $peserta->tanggal_pendaftaran   = date('y-m-d H:i:s');
+        $peserta->kode   = $kode;
         $peserta->save();
 
         // Pengajuan
@@ -109,6 +114,7 @@ class PesertaController extends Controller
         $pengajuan->id_kompetensi            = $request->input('skema_kompetensi');
         $pengajuan->tanggal_pengajuan        = date('y-m-d H:i:s');
         $pengajuan->konfirmasi_pembayaran    = '0';
+        $pengajuan->kode    = $kode;
 
         // $pengajuan->tagihan = $request->input('');
 
@@ -283,6 +289,12 @@ class PesertaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $peserta = Peserta::where('kode','=',$id)->first();
+        Storage::delete('public/ktp/'.$peserta->ktp);
+        Storage::delete('public/foto/'.$peserta->foto);
+        $peserta->delete();
+        $pengajuan = Pengajuan::where('kode','=',$id)->first();
+        $pengajuan->delete();
+        return redirect('/adm/peserta')->with('sukses','Data Peserta berhasil diperbarui');
     }
 }

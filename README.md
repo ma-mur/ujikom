@@ -2,3 +2,5 @@
 
 <p align="center"><img src="public/images/index.png" width="70%"></p>
 
+## Installasi
+

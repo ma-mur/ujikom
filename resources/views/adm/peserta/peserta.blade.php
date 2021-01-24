@@ -9,7 +9,7 @@
 					<div class="col-md-12">
 						<div class="card shadow">
 							<div class="card-header">
-								<a href="/adm/peserta/create" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah</a>
+								<a href="/adm/peserta/create" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah</a>							
 							</div>
 							<div class="card-body">
 								<div class="table-responsive">
@@ -20,7 +20,7 @@
 												<th>NIK</th>
 												<th>Nama Lengkap</th>
 												<th>Institusi</th>
-												<th>E-mail</th>
+												<th>Kompetensi</th>
 												<th>No Telp</th>
 												<th>Tanggal Pendaftaran</th>
 												<th></th>
@@ -35,7 +35,7 @@
 												<td>{{ $p->nik }}</td>
 												<td>{{ $p->nama_lengkap }}</td>
 												<td>{{ str_replace('_', ' ', $p->institusi) }}</td>
-												<td>{{ $p->email }}</td>
+												<td>{{ $p->nama_kompetensi }}</td>
 												<td>{{ $p->no_telp }}</td>
 												<td>{{ $p->tanggal_pendaftaran }}</td>
 												<td>
@@ -51,6 +51,11 @@
 														<button type="submit" class="btn btn-info" onclick="return confirm('Hati-hati saat mengedit data! Ingin melanjutkan?')"><i class="fas fa-edit"></i></button>	
 													</form>
 													
+													<form action="/adm/peserta/{{ $p->kode }}" method="post" class="d-inline">
+														@csrf
+														@method('DELETE')
+														<button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda ingin menghapusnya?')"><i class="fas fa-trash"></i></button>	
+													</form>
 
 												</td>
 											</tr>
