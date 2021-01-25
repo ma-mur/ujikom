@@ -22,4 +22,4 @@ ujian kompetensi.</p>
 maka <b>foto</b> dan <b>ktp</b> peserta menjadi tidak bisa ditampilkan.
 - untuk menjalankan project gunakan perintah <code>php artisan serve</code> pada terminal.
 - kemudian akses http://127.0.0.1:8000 atau http://localhost:8000 pada browser Anda.
-- untuk masuk ke panel Admin, gunakan <code>admin@ujikom.com</code> dan password <code>admin</code> pada halaman masuk.
+- untuk masuk ke panel Admin, gunakan hak akses <code>admin@ujikom.com</code> dan password <code>admin</code> pada halaman masuk.
