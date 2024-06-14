@@ -18,7 +18,7 @@ ujian kompetensi.</p>
 -   buka terminal dan arahkan ke directory project tersebut.
 -   jalan kan perintah <code>composer update</code> pada terminal
 -   setelah selesai jalankan perintah <code>php artisan key:generate</code>
--   untuk mempersiapkan database terdapat 2 cara, pertama dengan mengimportkan file .sql (app_ujikom.sql) yang terdapat pada project dan yang kedua dengan menggunakan perintah <code>php artisan migrate</code> pada terminal.
+-   untuk mempersiapkan database terdapat 2 cara, pertama dengan mengimportkan file <code>.sql (app_ujikom.sql)</code> yang terdapat pada project dan yang kedua dengan menggunakan perintah <code>php artisan migrate</code> pada terminal.
 -   copy file <code>.env.example</code> dan ubah menjadi <code>.env</code>
 -   ubah file <code>.env</code> untuk mengkonfigurasikan database.
 -   jalankan perintah <code>php artisan storage:link</code> untuk membuat symbolic link agar file dapat diakses oleh public. Jika Anda lupa menjalankan perintah ini
